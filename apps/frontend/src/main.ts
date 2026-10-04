@@ -1,14 +1,18 @@
-import('./assets/styles/main.css')
+import('./assets/styles/main.css');
 
-import { createApp } from 'vue'
-import { createPinia } from 'pinia'
+import { createApp } from 'vue';
+import { createPinia } from 'pinia';
 
-import App from './App.vue'
-import router from './router'
+import { ensureSeedData } from './api/index.ts';
+import App from './App.vue';
+import router from './router';
 
-const app = createApp(App)
+// Мок-бэкенд наполняется до первого обращения стора к репозиториям.
+ensureSeedData();
 
-app.use(createPinia())
-app.use(router)
+const app = createApp(App);
 
-app.mount('#app')
+app.use(createPinia());
+app.use(router);
+
+app.mount('#app');

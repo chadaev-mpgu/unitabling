@@ -1,0 +1,19 @@
+# Keep the build context small; only workspace manifests and frontend sources
+# are needed (see apps/frontend/Dockerfile).
+.git
+.idea
+.turbo
+.vscode
+
+**/node_modules
+**/dist
+**/coverage
+**/.eslintcache
+**/*.tsbuildinfo
+**/*.log
+
+docs
+README.md
+
+.env
+.env.*

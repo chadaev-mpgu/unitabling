@@ -9,7 +9,7 @@
     }
   ],
   "compilerOptions": {
-    "baseUrl": ".",
+    // Patterns resolve relative to this file (no `baseUrl`, which TypeScript 6 rejects).
     "paths": {
       "@/*": ["./src/*"]
     }

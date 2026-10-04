@@ -6,8 +6,8 @@
     // Extra safety for array and object lookups, but may have false positives.
     "noUncheckedIndexedAccess": true,
 
-    // Path mapping for cleaner imports.
-    "baseUrl": ".",
+    // Path mapping for cleaner imports. Without `baseUrl` the patterns resolve
+    // relative to this file, and TypeScript 6 no longer accepts `baseUrl`.
     "paths": {
       "@/*": ["./src/*"]
     },
